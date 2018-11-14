@@ -15,6 +15,7 @@ import android.util.Log
 class MainActivity : AppCompatActivity() {
 
     /*
+    Did test: close activity, kill process, send memory trim, restart, file handling exception
     CONSTRAINTS:
         - Will not work with Android 8 or above (broadcast receiver cannot be defined in Manifest)
           (This just means it won't start on reboot. Look at how to start automatically in ES)
