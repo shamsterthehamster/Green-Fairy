@@ -15,7 +15,7 @@ import java.util.Timer
 import java.util.TimerTask
 
 class NEService(context: Context?) : Service(), ComponentCallbacks2 {
-    val LOG_NAME = "NE-Service"
+    val LOG_NAME = "NES-Service"
 
     private var context: Context?
     private var counter = 0
@@ -103,7 +103,7 @@ class NEService(context: Context?) : Service(), ComponentCallbacks2 {
         return file_size
     }
 
-    @Nullable override fun onBind(intent: Intent): IBinder? {
+    override fun onBind(intent: Intent): IBinder? {
         return null
     }
 

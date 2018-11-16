@@ -5,12 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 
-class OnBootReceiver(): BroadcastReceiver() {
-    val LOG_NAME = "NE-OnBootReceiver"
+class RestartReceiver(): BroadcastReceiver() {
     val SERVICE_TYPE = NEService::class.java
+    val LOG_NAME = "NES-RestartReceiver"
 
     override fun onReceive(context: Context, intent: Intent) {
-        Log.i(LOG_NAME, "Just Booted")
-        context.startService(Intent(context, SERVICE_TYPE))
+        Log.i(LOG_NAME, "called")
+        val restart_intent = Intent(context, SERVICE_TYPE)
+        context.startService(restart_intent)
     }
+
 }

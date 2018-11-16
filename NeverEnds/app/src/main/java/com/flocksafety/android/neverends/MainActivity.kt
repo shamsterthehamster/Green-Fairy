@@ -18,16 +18,18 @@ class MainActivity : AppCompatActivity() {
     Did test: close activity, kill process, send memory trim, restart, file handling exception
     CONSTRAINTS:
         - Will not work with Android 8 or above (broadcast receiver cannot be defined in Manifest)
-          (This just means it won't start on reboot. Look at how to start automatically in ES)
+          (This just means it won't start on reboot. Look at how to start automatically in ES) - ARE YOU SURE?? (8.1)
         - Cannot restart after a force stop
-        - Memory constraints for image processing have not been tested
+        - Memory constraints for image processing have not been tested*** test it tho
+
+        Write down a list of anything ever that could kill any Android app ever
      */
 
     val THREE_SECONDS: Long = 3*1000
     val FIFTEEN_SECONDS: Long = 15*1000
     val THIRTY_SECONDS: Long = 30*1000
 
-    val LOG_NAME = "NE-MainActivity"
+    val LOG_NAME = "NES-MainActivity"
     val SERVICE_TYPE = NEService::class.java
 
     var serviceIntent: Intent? = null

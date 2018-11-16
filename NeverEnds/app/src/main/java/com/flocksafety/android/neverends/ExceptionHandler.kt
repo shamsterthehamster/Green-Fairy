@@ -6,7 +6,7 @@ import android.util.Log
 
 class ExceptionHandler(context: Context): java.lang.Thread.UncaughtExceptionHandler {
     private val context = context
-    val LOG_NAME = "NE-ExceptionHandler'"
+    val LOG_NAME = "NES-ExceptionHandler'"
 
     override fun uncaughtException(thread: Thread, exception: Throwable) {
         Log.i(LOG_NAME, "Caught Exception: $exception")
